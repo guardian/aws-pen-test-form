@@ -53,7 +53,7 @@ pen test form. It will look a little like the following:
     Comments:
     Here are full details of the AS groups and current instances. The actual instances will change during routine scaling and deployments.
     
-    janus-AutoscalingGroup-1IJMYNGI5LW37
+    my-AutoscalingGroup-123456789
     1.1.1.1	i-21fedcba (t2.medium)
     1.1.1.2	i-abcdef12 (t2.medium)
 
