@@ -13,8 +13,9 @@ describes each autoscaling group and the instances current;y running
 therein. This helps them to apply the permission to the AS groups
 rather than to specific instances.
 
-Filling in the form properly is a very tedious process, but luckily
-it's very easy to generate the information using the AWS SDK.
+Filling in the form properly is a tedious, especially when you need to
+exclude instance types that are not allowed to be pen tested. This
+tool uses the AWS SDK to generate that information for you.
 
 ## Usage
 
