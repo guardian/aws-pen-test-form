@@ -13,7 +13,7 @@ describes each autoscaling group and the instances current;y running
 therein. This helps them to apply the permission to the AS groups
 rather than to specific instances.
 
-Filling in the form properly is a tedious, especially when you need to
+Filling in the form properly is tedious, especially when you need to
 exclude instance types that are not allowed to be pen tested. This
 tool uses the AWS SDK to generate that information for you.
 
@@ -33,6 +33,9 @@ The project uses the AWS credentials file so you should provide a
 profile to choose which account to use (just as you would when using
 the AWS CLI tool). More info is available in the
 [AWS CLI documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
+Note that the credentials attached to this profile will need
+permission to perform `autoscaling:DescribeAutoScalingGroups` and
+`ec2:DescribeInstances` actions.
 
 The second argument is the AWS region to use when checking for AS
 groups and instances. This defaults to eu-west-1 for our (The
