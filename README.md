@@ -18,7 +18,9 @@ it's very easy to generate the information using the AWS SDK.
 
 ## Usage
 
-Included in this project is a jar that can be executed directly.
+In
+[the releases section of this repo](https://github.com/guardian/aws-pen-test-form/releases)
+is a jar that can be executed directly.
 
     java -jar pen-test-form.jar <AWS profile> [<aws region name>]
 
