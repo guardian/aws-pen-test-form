@@ -1,6 +1,6 @@
 name := """aws-pen-test-form"""
 
-version := "1.0"
+version := "1.1"
 
 scalaVersion := "2.11.6"
 
