@@ -33,9 +33,11 @@ The project uses the AWS credentials file so you should provide a
 profile to choose which account to use (just as you would when using
 the AWS CLI tool). More info is available in the
 [AWS CLI documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
-Note that the credentials attached to this profile will need
-permission to perform `autoscaling:DescribeAutoScalingGroups` and
-`ec2:DescribeInstances` actions.
+Note that the credentials attached to this profile will need at
+least the following permissions:
+
+* `autoscaling:DescribeAutoScalingGroups`
+* `ec2:DescribeInstances`
 
 The second argument is the AWS region to use when checking for AS
 groups and instances. This defaults to eu-west-1 for our (The
@@ -63,6 +65,16 @@ pen test form. It will look a little like the following:
 
 These are the three form fields that are tedious to fill in. You'll
 still need to get the details for the other fields.
+
+### Invalid instances
+
+AWS does not allow penetration testing to be performed on t1.small,
+t1.medium or t2.nano instance types. If you attempt to submit a request
+when these instance types are in use you'll be presented with a warning.
+This will describe which AutoScaling Groups are affected and which
+instances caused the problem. The affected instances will nto be
+included in the request and any AutoScaling Groups that have no valid
+instances will also be skipped.
 
 ## Development / alternate usage
 
